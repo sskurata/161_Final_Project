@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Hogwarts Student Directory - Login</title>
-</head>
-<body>
-    <div class="container">
-        <h2>Hogwarts Student Directory</h2>
-        <form action="student_directory.php" method="post">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="submit" value="Login">
-        </form>
-    </div>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+
+<img src="/static/img/title.png" alt="Welcome to Hogwarts" class="center">
+<h1>Where magic comes alive!</h1>
+
+<h2>About Hogwarts</h2>
+<p>Hogwarts School of Witchcraft and Wizardry is a renowned magical school located in the Highlands of Scotland. It is a place where young witches and wizards from all over the world come to learn and hone their magical abilities. With its rich history and esteemed faculty, Hogwarts offers a unique and immersive educational experience.</p>
+<p>At Hogwarts, students are sorted into one of four houses: Gryffindor, Hufflepuff, Ravenclaw, or Slytherin. Each house has its own distinct traits and values, fostering a sense of camaraderie and competition among the students.</p>
+
+
+{% endblock %}

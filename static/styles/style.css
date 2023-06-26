@@ -1,0 +1,78 @@
+body {
+    background-image: url('/static/img/bg2.jpg');
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  p {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.829);
+    color: #000000;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #000000;
+  }
+
+  h1 {
+    text-align: center;
+    color: #000000;
+  }
+
+  .center {
+    display: block;
+    margin-top: 85px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    height: 40%;
+  }
+
+  .navbar-scroll .nav-link,
+  .navbar-scroll .navbar-toggler-icon,
+  .navbar-scroll .navbar-brand {
+    color: #fff;
+  }
+  
+  /* Color of the links AFTER scroll */
+  .navbar-scrolled .nav-link,
+  .navbar-scrolled .navbar-toggler-icon,
+  .navbar-scrolled .navbar-brand {
+    color: #fff;
+  }
+  
+  /* Color of the navbar AFTER scroll */
+  .navbar-scroll,
+  .navbar-scrolled {
+    background-color: #cbbcb1;
+  }
+  
+  .mask-custom {
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, .15);
+  }
+  
+  .navbar-brand {
+    font-size: 1.75rem;
+    letter-spacing: 3px;
+  }
+
+  .container {
+    margin-top: 100px;
+  }
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+  }
+
