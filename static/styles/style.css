@@ -94,3 +94,45 @@ form {
   text-align: center;
 }
 
+#student_list, #profile{
+  color: black;
+  text-align: center;
+  text-decoration: bold;
+}
+
+#profile p{
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #ffffff59;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
+
+#student_list p{
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: #ffffff59;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
+
+#profile form{
+  margin-top: 20px;
+}
+
+img{
+    max-width:450px;
+    max-height:450px;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
+

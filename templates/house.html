@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
+<div id="student_list">
+<br><br><br>
 <h1>List of {{ house }} Students</h1>
-
+<p>Click on a student's name to view their profile</p>
 <ul>
     {% for student in students %}
-    <li><a href="/house/{{ student.id }}">{{ student.name }}</a></li>
+    <li><h3><a href="/house/{{ student.id }}">{{ student.name }}</a></h3></li>
     {% endfor %}
 </ul>
+</div>
 {% endblock %}

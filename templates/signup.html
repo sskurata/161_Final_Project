@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<br><br><br>
+<h1 style="text-align: center;">Sign Up for Hogwarts!</h1>
+<form action="{{ url_for('processing') }}" method="post">
+    <label for="s_house">House:</label>
+    <select name="student_house" id="s_house" required>
+        <option disabled selected value>...</option>
+        <option value="Gryffindor">Gryffindor</option>
+        <option value="Hufflepuff">Hufflepuff</option>
+        <option value="Slytherin">Slytherin</option>
+        <option value="Ravenclaw">Ravenclaw</option>
+    </select><br><br>
+    <label for="s_name">Name:</label>
+    <input type="text" name="student_name" id="s_name" required><br><br>
+    <label for="s_age">Birthday:</label>
+    <input type="date" name="student_bday" id="s_bday"><br><br>
+    <label for="s_url">Image URL:</label>
+    <input type="url" name="student_url" id="s_url"><br>
+    <br>
+    <p>Short Description</p>
+    <textarea name="student_desc" placeholder="Say something about yourself..." cols="40" rows="10"></textarea><br>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

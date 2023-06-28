@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+<br><br><br>
+<h1 style="text-align: center;">Sign Up for Hogwarts!</h1>
+<form action="{{ url_for('edit') }}" method="post">
+    <input type="hidden" name ="student_id" value="{{student.id}}">
+    <label for="s_house">House:</label>
+    <select name="student_house" id="s_house" required>
+        <option disabled selected value>...</option>
+        {% if student.house == "Gryffindor" %}
+        <option value="Gryffindor" selected>Gryffindor</option>
+        <option value="HufflePuff">Hufflepuff</option>
+        <option value="Slytherin">Slytherin</option>
+        <option value="Ravenclaw">Ravenclaw</option>
+
+        {% elif student.house == "Hufflepuff" %}
+        <option value="Gryffindor">Gryffindor</option>
+        <option value="HufflePuff" selected>Hufflepuff</option>
+        <option value="Slytherin">Slytherin</option>
+        <option value="Ravenclaw">Ravenclaw</option>
+
+        {% elif student.house == "Slytherin" %}
+        <option value="Gryffindor">Gryffindor</option>
+        <option value="HufflePuff">Hufflepuff</option>
+        <option value="Slytherin" selected>Slytherin</option>
+        <option value="Ravenclaw">Ravenclaw</option>
+
+        {% elif student.house == "Ravenclaw" %}
+        <option value="Gryffindor">Gryffindor</option>
+        <option value="HufflePuff">Hufflepuff</option>
+        <option value="Slytherin">Slytherin</option>
+        <option value="Ravenclaw" selected>Ravenclaw</option>
+
+        {% endif %}
+    </select><br><br>
+
+    <label for="s_name">Name:</label>
+    <input type="text" name="student_name" id="s_name" value="{{student.name}}" required ><br><br>
+    <label for="s_age">Birthday:</label>
+    <input type="text" name="student_bday" id="s_bday" value="{{student.bday}}"><br><br>
+    <label for="s_url">Image URL:</label>
+    <input type="url" name="student_url" id="s_url" value="{{student.image}}"><br>
+    <br>
+    <p>Short Description</p>
+    <textarea name="student_desc" cols="30" rows="10">{{student.desc}}</textarea><br>
+    <input type="submit" value="Update">
+</form>
+
+{% endblock %}

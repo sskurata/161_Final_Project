@@ -25,3 +25,34 @@ def read_student_by_student_id(student_id):
     result = cur.execute(query,(value,)).fetchone()
     conn.close()
     return result
+
+def insert_student(student_data):
+    conn, cur = connect_to_db(db_path)
+    query = 'INSERT INTO students (house, name, bday, image, desc) VALUES (?,?,?,?,?)'
+    values = (student_data['house'], student_data['name'],
+              student_data['bday'], student_data['image'],
+              student_data['desc'])
+    cur.execute(query,values)
+    conn.commit()
+    conn.close()
+
+def update_student(student_data):
+    conn, cur = connect_to_db(db_path)
+    query = "UPDATE students SET name=?, house=?, bday=?, image=?, desc=? WHERE id =?"
+    values = (student_data['name'], 
+              student_data['house'],
+              student_data['bday'],
+              student_data['image'],
+              student_data['desc'],
+              student_data['student_id'])
+    cur.execute(query,values)
+    conn.commit()
+    conn.close()
+
+def delete_student(student_data):
+    conn, cur = connect_to_db(db_path)
+    query = "DELETE FROM students WHERE id=?"
+    values = (student_data['student_id'],)
+    cur.execute(query,values)
+    conn.commit()
+    conn.close()
