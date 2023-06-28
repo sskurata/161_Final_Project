@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<img src="/static/img/title.png" alt="Welcome to Hogwarts" class="center">
-<h1>Where magic comes alive!</h1>
+<section class="video-container">
+    <video src="/static/vid/hogwartsvid.mp4" autoplay loop playsinline muted></video>
+</section>
 
-<h2>About Hogwarts</h2>
-<p>Hogwarts School of Witchcraft and Wizardry is a renowned magical school located in the Highlands of Scotland. It is a place where young witches and wizards from all over the world come to learn and hone their magical abilities. With its rich history and esteemed faculty, Hogwarts offers a unique and immersive educational experience.</p>
+<div class="content">
+    <img src="/static/img/title.png" alt="Welcome to Hogwarts" class="center">
+    <h1>Where magic comes alive!</h1>
+</div>
 
 {% endblock %}
