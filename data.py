@@ -18,11 +18,10 @@ def read_student_by_house(house):
     conn.close()
     return results
 
-# This function retrieves 1 pet by pet_id
-def read_pet_by_pet_id(pet_id):
+def read_student_by_student_id(student_id):
     conn, cur = connect_to_db(db_path)
-    query = 'SELECT * FROM pets WHERE id = ?'
-    value = pet_id
+    query = 'SELECT * FROM students WHERE id = ?'
+    value = student_id
     result = cur.execute(query,(value,)).fetchone()
     conn.close()
     return result

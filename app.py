@@ -7,15 +7,19 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/students/<house>')
-def students(house):
-    student_list = read_student_by_house(house)
-    return render_template("students.html", house=house, students=student_list)
+@app.route('/directory')
+def directory():
+    return render_template('directory.html')
 
-@app.route('/animals/<int:pet_id>')
-def pet(pet_id):
-    pet = read_pet_by_pet_id(pet_id)
-    return render_template("pet.html",pet=pet)
+@app.route('/house/<house>')
+def house(house):
+    student_list = read_student_by_house(house)
+    return render_template("house.html", house=house, students=student_list)
+
+@app.route('/house/<int:student_id>')
+def student(student_id):
+    student = read_student_by_student_id(student_id)
+    return render_template("student.html",student=student)
 
 if __name__ == "__main__":
     app.run(debug=True)
